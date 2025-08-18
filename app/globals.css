@@ -48,6 +48,14 @@ body {
   --color-tag: #b0d9ff;
 }
 
+@layer base{
+  input{
+    @apply border-[1px] border-[#BCBCBC] rounded-[10px] px-[12px] py-[16px];
+  }
+}
+
+
+
 @layer utilities {
   .linear_gradient {
     @apply bg-gradient-to-r from-[#A128FF] to-[#6100AD];
@@ -56,8 +64,16 @@ body {
     @apply bg-gradient-to-b from-[#FEFEFD] to-[#F1F1F1] drop-shadow-[#94949440];
   }
   .container {
-    @apply w-full px-[64px];
+    @apply w-full mx-auto px-[64px];
   }
+  .form_div{
+    @apply mb-[6px];
+  }
+  .form_label{
+    @apply font-[600] text-[20px] text-Form_label mb-3;
+  }
+
+  
 }
 
 @layer components {

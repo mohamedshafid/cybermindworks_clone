@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import AppProvider from "@/context/AppContext";
 
 export const metadata: Metadata = {
   title: "CyberMind Works | Mohamed Hafid",
-  description:
-    "A Full-stack Admin Job Panel built with Next.js and TypeScript",
+  description: "A Full-stack Admin Job Panel built with Next.js and TypeScript",
 };
 
 const satoshi = localFont({
@@ -26,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${satoshi.variable} antialiased`}>{children}</body>
+      <body className={`${satoshi.variable} antialiased`}>
+        <AppProvider>{children}</AppProvider>
+      </body>
     </html>
   );
 }

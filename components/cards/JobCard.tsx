@@ -4,7 +4,7 @@ import React from "react";
 
 const JobCard = () => {
   return (
-    <div className="cards">
+    <div className="cards mt-10 w-full">
       <div className="w-full flex items-start justify-between">
         <div className="comp_linear_gradient w-[82px] h-[82px] flex items-center justify-center rounded-[12px] border-white border-[1px]">
           <Image src={comp_amazon} alt="Company Logo" width={65} height={65} />
@@ -31,7 +31,9 @@ const JobCard = () => {
         </li>
       </ul>
 
-      <button className="button flex items-center justify-center font-[600] w-full mt-3">Apply Now</button>
+      <button className="button flex items-center justify-center font-[600] w-full mt-3">
+        Apply Now
+      </button>
     </div>
   );
 };

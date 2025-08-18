@@ -1,18 +1,25 @@
+"use client";
+
 import React from "react";
-import { JobList, Navbar } from "@/components";
+import { CreateJob, JobList, Navbar } from "@/components";
+import { useAppContext } from "@/hooks/useAppContext";
 
 const Home = () => {
+  const { isModalOpen } = useAppContext();
+  console.log("isModalOpen:", isModalOpen);
+
   return (
-    <React.Fragment>
+    <>
+      {isModalOpen && <CreateJob />}
       <div className="w-full h-screen bg-primary">
         <div className="w-full bg-white">
           <Navbar />
         </div>
         <div className="container">
-          <JobList/>
+          <JobList />
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
