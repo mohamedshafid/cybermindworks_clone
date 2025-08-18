@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-satoshi);
+  overflow-x: hidden;
+}
+
+@theme inline {
+  /* Fonts */
+  --font-satoshi: var(--font-satoshi);
+
+  /* Colors */
+  /* Overrall Application */
+  --color-primary: #fbfbff;
+  /* Modal Background */
+  --color-secondary: #7d7d7f;
+
+  /* Default Color */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Navbar */
+  --color-navbar: #303030;
+
+  /* Range Input */
+  --color-Range_input: #222222;
+
+  /* Cards impo Info */
+  --color-Cards_info: #5a5a5a;
+
+  /* Cards Description */
+  --color-Cards_desc: #555555;
+
+  /* Filter Placeholder */
+  --color-Filter_placeholder: #686868;
+
+  /* Button Color */
+  --color-button: #00aaff;
+
+  /* Forms */
+  --color-Form_label: #636363;
+  --color-Form_placeholder: #bcbcbc;
+}
+
+@layer utilities {
+  .linear_gradient {
+    @apply bg-gradient-to-r from-[#A128FF] to-[#6100AD];
+  }
+}
