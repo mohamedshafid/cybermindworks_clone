@@ -43,10 +43,28 @@ body {
   /* Forms */
   --color-Form_label: #636363;
   --color-Form_placeholder: #bcbcbc;
+
+  /* Tag */
+  --color-tag: #b0d9ff;
 }
 
 @layer utilities {
   .linear_gradient {
     @apply bg-gradient-to-r from-[#A128FF] to-[#6100AD];
+  }
+  .comp_linear_gradient {
+    @apply bg-gradient-to-b from-[#FEFEFD] to-[#F1F1F1] drop-shadow-[#94949440];
+  }
+  .container {
+    @apply w-full px-[64px];
+  }
+}
+
+@layer components {
+  .cards {
+    @apply bg-white rounded-[12px] w-[316px] drop-shadow-[#D3D3D326] drop-shadow-2xl shadow-lg p-[16px] flex flex-col items-start;
+  }
+  .button{
+    @apply bg-button text-white rounded-[10px] px-[10px] py-[12px];
   }
 }

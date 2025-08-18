@@ -1,11 +1,19 @@
-import React from 'react'
+import React from "react";
+import { JobList, Navbar } from "@/components";
 
 const Home = () => {
   return (
-    <div className='underline text-4xl font-satoshi'>
-      This is Mohamed Hafid
-    </div>
-  )
-}
+    <React.Fragment>
+      <div className="w-full h-screen bg-primary">
+        <div className="w-full bg-white">
+          <Navbar />
+        </div>
+        <div className="container">
+          <JobList/>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
 
-export default Home
+export default Home;
