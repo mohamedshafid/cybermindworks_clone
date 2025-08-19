@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useEffect } from "react";
 import JobForm from "./forms/JobForm";
@@ -7,15 +7,6 @@ import { useAppContext } from "@/hooks/useAppContext";
 const CreateJob = () => {
   const { formRef, setIsModalOpen } = useAppContext();
 
-  // whenver the modal is open,it disable body scroll
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, []);
-
-  // close modal when clicking outside the form
   useEffect(() => {
     const handleClickOutside = (event: any) => {
       if (formRef?.current && !formRef?.current.contains(event.target as any)) {

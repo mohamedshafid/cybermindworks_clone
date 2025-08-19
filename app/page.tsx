@@ -6,7 +6,6 @@ import { useAppContext } from "@/hooks/useAppContext";
 
 const Home = () => {
   const { isModalOpen } = useAppContext();
-  console.log("isModalOpen:", isModalOpen);
 
   return (
     <>

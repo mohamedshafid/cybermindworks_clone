@@ -1,11 +1,14 @@
 import React from "react";
+import { UseFormRegisterReturn } from "react-hook-form";
 
 type FormInputProps = {
   type?: string;
   placeholder?: string;
-  name?: string;
+  name: string;
   id?: string;
   options?: string[];
+  register?: UseFormRegisterReturn;
+  error?: string;
 };
 
 const FormInput = ({
@@ -14,6 +17,8 @@ const FormInput = ({
   name,
   id,
   options = [],
+  register,
+  error,
 }: FormInputProps) => {
   switch (type) {
     case "text":
@@ -26,32 +31,39 @@ const FormInput = ({
           <input
             type={type}
             placeholder={placeholder}
-            name={name}
             id={id}
-            className="max-w-[376px] w-full placeholder:font-[500] placeholder:text-Form_placeholder"
+            name={name}
+            className="max-w-[376px] w-full  placeholder:font-[500] placeholder:text-Form_placeholder"
+            {...register}
           />
+          {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
         </div>
       );
+
     case "textarea":
       return (
         <div>
           <textarea
             placeholder={placeholder}
-            name={name}
             id={id}
-            className="w-full placeholder:font-[500] placeholder:text-Form_placeholder"
+            name={name}
+            className="w-full  placeholder:font-[500] placeholder:text-Form_placeholder"
             rows={5}
+            {...register}
           />
+          {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
         </div>
       );
+
     case "select":
       return (
         <div>
           <select
-            name={name}
             id={id}
-            className="max-w-[376px] w-full"
-            defaultValue="" 
+            name={name}
+            className="max-w-[376px] w-full "
+            defaultValue=""
+            {...register}
           >
             <option
               value=""
@@ -66,8 +78,12 @@ const FormInput = ({
               </option>
             ))}
           </select>
+          {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
         </div>
       );
+
+    default:
+      return null;
   }
 };
 
