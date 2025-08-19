@@ -1,16 +1,42 @@
-import React from 'react'
-import JobForm from './forms/JobForm';
+'use client';
+
+import React, { useEffect } from "react";
+import JobForm from "./forms/JobForm";
+import { useAppContext } from "@/hooks/useAppContext";
 
 const CreateJob = () => {
-  return (
-    <div className="fixed top-0 left-0 w-full h-full bg-secondary/80 flex items-center justify-center z-50">
-      <div className="bg-white p-6 rounded-[16px] drop-shadow-[#A9A9A940] drop-shadow-2xl flex flex-col items-center">
-        <h1 className='font-[700] text-[24px]'>Create Job Opening</h1>
+  const { formRef, setIsModalOpen } = useAppContext();
 
-        <JobForm/>
+  // whenver the modal is open,it disable body scroll
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
+  // close modal when clicking outside the form
+  useEffect(() => {
+    const handleClickOutside = (event: any) => {
+      if (formRef?.current && !formRef?.current.contains(event.target as any)) {
+        setIsModalOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <div className="fixed inset-0 bg-secondary/80 flex items-center justify-center z-40">
+      {/* Modal */}
+      <div className="bg-white p-6 rounded-[16px] shadow-xl flex flex-col items-center w-full max-w-[848px] relative z-50">
+        <h1 className="font-bold text-[24px] mb-[30px]">Create Job Opening</h1>
+        <JobForm />
       </div>
     </div>
   );
-}
+};
 
-export default CreateJob
+export default CreateJob;
