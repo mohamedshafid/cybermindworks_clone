@@ -1,14 +1,29 @@
+"use client";
+
 import React from "react";
 import { JobCard } from "@/components";
-import { jobs } from "@/constants";
+import { jobs } from "@/constants"; 
+import { useAppContext } from "@/hooks/useAppContext";
 
 const JobList = () => {
-  const jobList = [...jobs, ...jobs, ...jobs];
-  jobList.splice(jobList.length - 1, 1);
+  const { search, location, jobType } = useAppContext();
+
+  const jobsList=[...jobs,...jobs,...jobs];
+  jobsList.splice(jobsList.length - 1, 1); 
+
+  const filteredJobs = jobsList.filter((job) => {
+    const matchSearch = job.job_title
+      .toLowerCase()
+      .includes(search.toLowerCase());
+    const matchLocation = location ? job.location === location : true;
+    const matchType = jobType ? job.job_type === jobType : true;
+
+    return matchSearch && matchLocation && matchType;
+  });
 
   return (
     <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[16px]">
-      {jobList.map((item, index) => (
+      {filteredJobs.map((item, index) => (
         <JobCard
           key={index}
           job_exp={item.job_exp}

@@ -1,4 +1,4 @@
-import { comp_amazon } from "@/assets";
+import { cards_exp, cards_salary, cards_type, comp_amazon } from "@/assets";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 
@@ -8,7 +8,7 @@ type JobCardProps = {
   job_desc?: string[];
   job_exp: string;
   job_location?: string;
-  job_salary?: string;
+  job_salary?: number;
 };
 
 const JobCard = ({
@@ -32,9 +32,18 @@ const JobCard = ({
       <h1 className="font-[700] text-[20px] mt-3">{job_title}</h1>
 
       <div className="font-[500] text-[16px] text-Cards_info flex items-center gap-[16px] mt-3">
-        <p>{job_exp}</p>
-        <p>{job_location}</p>
-        <p>{job_salary}</p>
+        <p className="flex items-center gap-1">
+          <Image src={cards_exp} width={16} height={16} alt="Experience Icon" />
+          {job_exp}
+        </p>
+        <p className="flex items-center gap-1">
+          <Image src={cards_type} width={16} height={16} alt="Location Icon" />
+          {job_location}
+        </p>
+        <p className="flex items-center gap-1">
+          <Image src={cards_salary} width={16} height={16} alt="Salary Icon" />
+          {job_salary}LPA
+        </p>
       </div>
 
       <ul className="list-disc ml-[16px] text-Cards_desc text-[14px] font-[500] mt-3">

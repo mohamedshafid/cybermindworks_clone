@@ -8,6 +8,33 @@ body {
   overflow-x: hidden;
 }
 
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #000000;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #000000;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
 @theme inline {
   /* Fonts */
   --font-satoshi: var(--font-satoshi);
@@ -48,13 +75,13 @@ body {
   --color-tag: #b0d9ff;
 }
 
-@layer base{
-  input,select,textarea{
+@layer base {
+  input,
+  select,
+  textarea {
     @apply border-[1px] border-[#BCBCBC] rounded-[10px] px-[12px] py-[16px];
   }
 }
-
-
 
 @layer utilities {
   .linear_gradient {
@@ -64,23 +91,27 @@ body {
     @apply bg-gradient-to-b from-[#FEFEFD] to-[#F1F1F1] drop-shadow-[#94949440];
   }
   .container {
-    @apply w-full mx-auto px-[64px];
+    @apply w-full mx-auto mx-[64px];
   }
-  .form_div{
+  .form_div {
     @apply mb-[6px];
   }
-  .form_label{
+  .form_label {
     @apply font-[600] text-[20px] text-Form_label mb-3;
   }
-
-  
+  .filter_input {
+    @apply border-none outline-none placeholder:text-Filter_placeholder w-full text-Filter_placeholder;
+  }
+  .filter_group {
+    @apply flex flex-row gap-3 flex-1 items-center min-w-[150px];
+  }
 }
 
 @layer components {
   .cards {
     @apply bg-white rounded-[12px] w-[316px] drop-shadow-[#D3D3D326] drop-shadow-2xl shadow-lg p-[16px] flex flex-col items-start;
   }
-  .button{
+  .button {
     @apply bg-button text-white rounded-[10px] px-[10px] py-[12px];
   }
 }

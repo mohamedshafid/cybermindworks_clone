@@ -15,11 +15,15 @@ export const jobs = [
     job_title: "Full Stack Developer",
     job_exp: "1-3 yr Exp",
     job_location: "Onsite",
-    job_salary: "12LPA",
+    job_salary: 12,
     job_desc: [
       "A user-friendly interface lets you browse stunning photos and videos",
       "Filter destinations based on interests and travel style, and create personalized",
     ],
+    job_type: "FullTime",
+    location: "Bangalore",
+    
+
   },
   {
     job_id: 2,
@@ -27,11 +31,13 @@ export const jobs = [
     job_title: "Node Js Developer",
     job_exp: "1-3 yr Exp",
     job_location: "Onsite",
-    job_salary: "12LPA",
+    job_salary: 12,
     job_desc: [
       "A user-friendly interface lets you browse stunning photos and videos",
       "Filter destinations based on interests and travel style, and create personalized",
     ],
+    job_type: "PartTime",
+    location: "Chennai",
   },
   {
     job_id: 3,
@@ -39,10 +45,12 @@ export const jobs = [
     job_title: "UX/UI Designer",
     job_exp: "1-3 yr Exp",
     job_location: "Onsite",
-    job_salary: "12LPA",
+    job_salary: 12,
     job_desc: [
       "A user-friendly interface lets you browse stunning photos and videos",
       "Filter destinations based on interests and travel style, and create personalized",
     ],
+    job_type: "Contract",
+    location: "Hyderabad",
   },
 ];
