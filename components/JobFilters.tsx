@@ -5,6 +5,7 @@ import { Pipe } from "@/components";
 import Image from "next/image";
 import { filter_jobtype, filter_location, filter_search } from "@/assets";
 import { useAppContext } from "@/hooks/useAppContext";
+import SalaryInput from "./extras/SalaryInput";
 
 const JobFilters = () => {
   const {
@@ -93,19 +94,9 @@ const JobFilters = () => {
           className="flex items-center justify-between text-Range_input font-[600]"
         >
           <span>Salary Per Month</span>
-          <span>₹{salary / 1000}k</span>
+          <span>₹50k - ₹80k</span>
         </label>
-        <input
-          type="range"
-          className="filter_input"
-          name="filter_salary"
-          id="filter_salary"
-          min={0}
-          max={100000}
-          step={1000}
-          value={salary}
-          onChange={(e) => setSalary(parseInt(e.target.value))}
-        />
+        <SalaryInput/>
       </div>
     </form>
   );

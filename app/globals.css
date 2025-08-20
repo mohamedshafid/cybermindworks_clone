@@ -20,9 +20,9 @@ input[type="range"]::-webkit-slider-thumb {
   height: 16px;
   width: 16px;
   border-radius: 50%;
-  background: #000000;
+  background: white;
   cursor: pointer;
-  border: 2px solid white;
+  border: 5px solid black;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -30,9 +30,9 @@ input[type="range"]::-moz-range-thumb {
   height: 16px;
   width: 16px;
   border-radius: 50%;
-  background: #000000;
+  background: blalck;
   cursor: pointer;
-  border: 2px solid white;
+  border: 2px solid black;
 }
 
 @theme inline {
@@ -91,7 +91,7 @@ input[type="range"]::-moz-range-thumb {
     @apply bg-gradient-to-b from-[#FEFEFD] to-[#F1F1F1] drop-shadow-[#94949440];
   }
   .container {
-    @apply w-full mx-auto mx-[64px];
+    @apply w-full mx-auto px-[64px];
   }
   .form_div {
     @apply mb-[6px];
@@ -109,7 +109,7 @@ input[type="range"]::-moz-range-thumb {
 
 @layer components {
   .cards {
-    @apply bg-white rounded-[12px] w-[316px] drop-shadow-[#D3D3D326] drop-shadow-2xl shadow-lg p-[16px] flex flex-col items-start;
+    @apply bg-white rounded-[12px] w-[316px] shadow-[#D3D3D326] shadow-md p-[16px] flex flex-col items-start;
   }
   .button {
     @apply bg-button text-white rounded-[10px] px-[10px] py-[12px];

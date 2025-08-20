@@ -14,8 +14,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full flex items-center justify-center">
-        <nav className="flex items-center justify-between px-5 py-3 bg-white rounded-[122px] w-full max-w-[890px] h-[80px] shadow-lg mt-[21px]">
+      <div className="w-full flex items-center justify-center ">
+        <nav className="flex items-center justify-around lg:justify-between px-2 md:px-3 lg:px-5 py-3 bg-white rounded-[122px] w-full max-w-[890px] h-[80px] drop-shadow-lg drop-shadow-[#7F7F7F26] mt-[21px]">
           <Image src={app_logo} width={44} height={44} alt="logo" />
           <ul className="flex items-center justify-center flex-1">
             {navLinks?.map((item) => (

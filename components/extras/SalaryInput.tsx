@@ -9,18 +9,14 @@ const SalaryInput = () => {
   return (
     <div className="w-full max-w-md mx-auto">
       <div className="relative">
-        {/* Track */}
-        <div className="absolute top-1/2 left-0 right-0 h-1 bg-gray-200 rounded-full" />
-        {/* Active range */}
+        <div className="absolute  left-0 right-0 h-1 bg-gray-200 rounded-full" />
         <div
-          className="absolute top-1/2 h-1 bg-black rounded-full"
+          className="absolute  h-1 bg-black rounded-full"
           style={{
             left: `${minValue}%`,
             right: `${100 - maxValue}%`,
           }}
         />
-
-        {/* Min slider */}
         <input
           type="range"
           min="0"
@@ -32,7 +28,6 @@ const SalaryInput = () => {
           }}
           className="absolute w-full h-1 bg-transparent appearance-none pointer-events-none filter_input"
         />
-        {/* Max slider */}
         <input
           type="range"
           min="0"

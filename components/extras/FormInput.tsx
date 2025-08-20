@@ -33,7 +33,7 @@ const FormInput = ({
             placeholder={placeholder}
             id={id}
             name={name}
-            className="max-w-[376px] w-full  placeholder:font-[500] placeholder:text-Form_placeholder"
+            className="max-w-[376px] w-full  placeholder:font-[500] placeholder:text-Form_placeholder text-[18px] font-[500]"
             {...register}
           />
           {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
