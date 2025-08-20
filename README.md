@@ -29,12 +29,12 @@ An **Admin Job Creation Platform** built with **Next.js 15**, **TailwindCSS v4**
 # Screenshots
 
 <p align="center">
-  <img src="https://github.com/mohamedshafid/cybermindworks_clone/blob/main/screenshots/sc1.png" width="300" />
-  <img src="https://github.com/mohamedshafid/cybermindworks_clone/blob/main/screenshots/sc2.png" width="300" />
+  <img src="https://github.com/mohamedshafid/cybermindworks_clone/blob/main/screenshots/sc1.png" width="100%" />
+  <img src="https://github.com/mohamedshafid/cybermindworks_clone/blob/main/screenshots/sc2.png" width="100%" />
 </p>
 <p align="center">
-  <img src="https://github.com/mohamedshafid/cybermindworks_clone/blob/main/screenshots/sc3.png" width="300" />
-  <img src="https://github.com/mohamedshafid/cybermindworks_clone/blob/main/screenshots/sc4.png" width="300" />
+  <img src="https://github.com/mohamedshafid/cybermindworks_clone/blob/main/screenshots/sc3.png" width="100%" />
+  <img src="https://github.com/mohamedshafid/cybermindworks_clone/blob/main/screenshots/sc4.png" width="100%" />
 </p>
 
 
