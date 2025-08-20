@@ -34,7 +34,7 @@ An **Admin Job Creation Platform** built with **Next.js 15**, **TailwindCSS v4**
 </p>
 <p align="center">
   <img src="https://github.com/mohamedshafid/cybermindworks_clone/blob/main/screenshots/sc3.png" width="100%" />
-  <img src="https://github.com/mohamedshafid/cybermindworks_clone/blob/main/screenshots/sc4.png" width="100%" />
+  <img src="https://github.com/mohamedshafid/cybermindworks_clone/blob/main/screenshots/sc5.png" width="100%" />
 </p>
 
 
