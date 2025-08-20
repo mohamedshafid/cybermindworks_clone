@@ -10,7 +10,7 @@ import JobFilters from "./JobFilters";
 
 const Navbar = () => {
   const [isMouseOver, setIsMouseOver] = useState(false);
-  const { isModalOpen, setIsModalOpen } = useAppContext();
+  const { setIsModalOpen } = useAppContext();
 
   return (
     <>
@@ -18,7 +18,7 @@ const Navbar = () => {
         <nav className="flex items-center justify-between px-5 py-3 bg-white rounded-[122px] w-full max-w-[890px] h-[80px] shadow-lg mt-[21px]">
           <Image src={app_logo} width={44} height={44} alt="logo" />
           <ul className="flex items-center justify-center flex-1">
-            {navLinks?.map((item, index) => (
+            {navLinks?.map((item) => (
               <li
                 key={item}
                 className="text-navbar font-[600] px-[24px] py-[8px] rounded-[12px] p-5 hover:shadow-lg hover:translate-x-1 hover:translate-y-1 duration-300 cursor-default"
